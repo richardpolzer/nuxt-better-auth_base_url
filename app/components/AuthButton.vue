@@ -13,7 +13,7 @@ const { loggedIn, user, signIn, signOut, ready } = useUserSession()
     <UButton
       v-if="ready && loggedIn"
       :avatar="{ src: user?.image ?? undefined }"
-      icon="lucide:log-out"
+      :icon="user?.image ? undefined : 'lucide:log-out'"
       @click="signOut()"
     >
       {{ user?.name }}

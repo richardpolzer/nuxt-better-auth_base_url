@@ -8,6 +8,14 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  runtimeConfig: {
+    githubClientId: '',
+    githubClientSecret: '',
+    public: {
+      siteUrl: ''
+    }
+  },
+
   routeRules: {
     '/': { prerender: true }
   },
